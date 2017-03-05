@@ -3,19 +3,21 @@ html {
   font-family: sans-serif;;
 }
 
-.center {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 input {
   border: 1px solid grey;
   width: 768px;
   height: 60px;
   text-align: center;
   font-size: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  font-weight: bold;
 }
 
 #main {
@@ -55,4 +57,11 @@ input {
 
 #logo {
   transform: translate(-50%, -300px);
+}
+
+.center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

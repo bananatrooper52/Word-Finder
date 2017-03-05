@@ -4,7 +4,6 @@ var words;
 var blanks = ["-", ".", " "];
 
 $.ajax({
-  async: true,
   type: "GET",
   url: wordsloc,
   success: function(str) {
@@ -12,6 +11,11 @@ $.ajax({
     words = str.split(/\s+/);
     $("#loadscreen").fadeOut(400);
     $("#main").fadeIn(400);
+  },
+  error: function(XMLHttpRequest, s, e) {
+    $("#loadscreen h1").fadeOut(function() {
+      $(this).text("Could not load dictionary").fadeIn();
+    });
   }
 });
 
@@ -42,7 +46,7 @@ function showResults() {
   $("#answers").html("<h3>Possible words (" + results.length + " matches): </h3>");
 
   for(var i = 0; i < results.length; i++) {
-    $("#answers").append("<p>" + results[i] + "</p>");
+    $("#answers").append("<p><a target='_blank' href='http://www.dictionary.com/browse/" + results[i] + "?s=t'>" + results[i] + "</a><p>");
   }
 
   $("#answers").fadeIn(400);
