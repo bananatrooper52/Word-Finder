@@ -6,19 +6,21 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <h1 id="logo" class="center">Word Finder</h1>
     <div id="loadscreen" class="center">
       <h1>loading...</h1>
     </div>
     <div id="main" class="center">
-      <h1 id="logo" class="center">Word Finder</h1>
       <p id="instructions">To use, type the letters that you know, and use dash
       [-] for the ones you don't know</p>
-      <p>example: -av-rit-</p>
+      <p>example: -av-rit- (try it!)</p>
       <form id="word-form" action="" method="post">
-        <input type="text" id="inputword" autocomplete="off">
+        <input type="text" id="inputword" placeholder="type here" autocomplete="off">
       </form>
     </div>
-    <div id="answers" class="center"></div>
+    <div id="answers" class="center">
+      <h3>Possible words: </h3>
+    </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script type="text/javascript" src="code.js"></script>
   </body>
