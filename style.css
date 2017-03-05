@@ -1,0 +1,58 @@
+html {
+  font-size: 20px;
+  font-family: sans-serif;;
+}
+
+.center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input {
+  border: 1px solid grey;
+  width: 768px;
+  height: 60px;
+  text-align: center;
+  font-size: 40px;
+}
+
+#main {
+  text-align: center;
+  display: none;
+}
+
+#loadscreen {
+  font-size: 20px;
+}
+
+#answers {
+  overflow-y: auto;
+  transform: translate(-50%, 120px);
+  border: 1px solid grey;
+  width: 768px;
+  height: 300px;
+  display: none;
+  text-align: center;
+}
+
+#inputword {
+  border-color: grey;
+  transition: 0.2s;
+}
+
+#inputword:hover {
+  border-color: #0077FF;
+  transition: 0.4s;
+}
+
+#inputword:focus {
+  border-color: #0077FF;
+  outline: none;
+  transition: 0.2s;
+}
+
+#logo {
+  transform: translate(-50%, -300px);
+}
