@@ -1,4 +1,4 @@
-var wordsloc = "https://raw.githubusercontent.com/dwyl/english-words/master/words.txt";
+var wordsloc = "https://raw.githubusercontent.com/bananatrooper52/word-finder/master/words.txt";
 var wordstring;
 var words;
 var blanks = ["-", ".", " "];
@@ -9,6 +9,7 @@ $.ajax({
   url: wordsloc,
   success: function(str) {
     wordstring = str;
+    wordstring = wordstring.slice(0, wordstring.indexOf("---") + "---".length);
     words = str.split(/\s+/);
     $("#loadscreen").fadeOut(400);
     $("#main").fadeIn(400);
@@ -21,7 +22,7 @@ $("#word-form").submit(function() {
 });
 
 function showResults() {
-  word = $("#inputword").val();
+  var word = $("#inputword").val();
   $("#inputword").val("");
 
   var results = [];
